@@ -105,6 +105,15 @@ article::before, article::after {
 .reviewgrid-container {
   display: flex;
   overflow: auto;
+  -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
+  scrollbar-width: none;     /* hide scrollbar Firefox */
+
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.reviewgrid-container::-webkit-scrollbar {
+  display: none; /* hide scrollbar Chrome, Safari and Opera */
 }
 
 .review {
@@ -128,6 +137,7 @@ article::before, article::after {
 #imdb           > .stars { --rating: 81%; }
 #rottentomatoes > .stars { --rating: 92%; }
 #metacritic     > .stars { --rating: 88%; }
+#googleaudience > .stars { --rating: 94%; }
 
 
 #wesandersonbox  { grid-area: wesanderson  }
