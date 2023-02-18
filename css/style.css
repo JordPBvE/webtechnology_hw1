@@ -6,6 +6,7 @@ html, body {
   background: #feeef6;
 }
 
+/* page heder */
 header {
   color: #402a54;
   background-color: plum;
@@ -24,6 +25,7 @@ header {
   font-size: 3em;
 }
 
+/* navigation bar: flexbox with page buttons*/
 nav {
   display: flex;
   margin: 0;
@@ -45,6 +47,9 @@ nav {
  transform: scale(1.1);
 }
 
+/* THIS FLEXBOX MARGIN IDEA CAN BE REPLACED WITH JUST MARGINS OR NEEDS TO HAVE SOME LAYOUT TO
+   ADD SOMETHING OTHER THAN JUST WHITESPACE */
+/* general layout for articles: flexbox of width 3, first and last are empty for page marins */
 article {
   display: flex;
   justify-content: center;
@@ -57,6 +62,7 @@ article::before, article::after {
   flex-shrink: 0;
 }
 
+/* film poster and trailer: flexbox with those 2 items */
 #postertrailer {
   display: flex;
   justify-content: space-between;
@@ -66,6 +72,7 @@ article::before, article::after {
 #poster  { width: 30%; }
 #trailer { flex-grow: 1; flex-shrink: 1;}
 
+/* article separators: flexbox width 3 where first and last are stripe  */
 .separator {
   padding: 5px;
   display: flex;
@@ -79,6 +86,15 @@ article::before, article::after {
   font-weight: 600;
 }
 
+.separator::before, .separator::after {
+  content: "";
+  height: .125em;
+  background: #402a54;
+  flex: 1;
+  margin: .5em .7em;
+}
+
+/* separator if the text inside is an anchor */
 .separatorbutton {
   text-decoration: none;
   color: #991932;
@@ -90,14 +106,7 @@ article::before, article::after {
   transform: scale(1.1);
 }
 
-.separator::before, .separator::after {
-  content: "";
-  height: .125em;
-  background: #402a54;
-  flex: 1;
-  margin: .5em .7em;
-}
-
+/* reviews go from edge to edge because of scrolling */
 #reviewarticle::after, #reviewarticle::before {
   display: none;
 }
@@ -128,18 +137,20 @@ article::before, article::after {
   border-radius: 50%;
 }
 
+/* rating stars: png matte with gradient background */
 .stars {
   --rating: 100%;
   background: linear-gradient(90deg, #991932 Calc(var(--rating) - 1%), 
                                      white   Calc(var(--rating) + 3%));
   width: 100%;
 }
+
 #imdb           > .stars { --rating: 81%; }
 #rottentomatoes > .stars { --rating: 92%; }
 #metacritic     > .stars { --rating: 88%; }
 #googleaudience > .stars { --rating: 94%; }
 
-
+/* cast and crew grid:  */
 #wesandersonbox  { grid-area: wesanderson  }
 #ralphfiennesbox { grid-area: ralphfiennes }
 #tonyrevoloribox { grid-area: tonyrevolori }
@@ -158,12 +169,22 @@ article::before, article::after {
   justify-content: space-around;
 }
 
+/* individual cast and crew member */
 .castcrewcell {
-  flex-grow: 1;
   display: flex;
   align-items: center;
   padding: 5px;
 }
+
+.ccimg {
+  flex-shrink: 0;
+  border: 2px solid #feeef6;
+  margin: 5px 10px;
+  object-fit: cover;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+}
+
 .cctextbox {
   flex-grow: 1;
 }
@@ -181,15 +202,7 @@ article::before, article::after {
   margin: 2px 5px;
 }
 
-.ccimg {
-  flex-shrink: 0;
-  border: 2px solid #feeef6;
-  margin: 5px 10px;
-  object-fit: cover;
-  width: 100px; height: 100px;
-  border-radius: 50%;
-}
-
+/* if width less than 1200, ccgrid becomes a flexbox to accomodate page wrapping */
 @media (max-width: 1200px) {
   .castgrid-container {
     display: flex;
