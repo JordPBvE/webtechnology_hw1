@@ -116,16 +116,48 @@ article::before, article::after {
   overflow: auto;
   -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
   scrollbar-width: none;     /* hide scrollbar Firefox */
-
   padding-left: 10%;
   padding-right: 10%;
+  gap: 10px;
 }
 
 .reviewgrid-container::-webkit-scrollbar {
   display: none; /* hide scrollbar Chrome, Safari and Opera */
 }
 
-.review {
+.starredreview > .reviewer   { grid-area: reviewer; text-align: center;}
+.starredreview > .reviewlogo { grid-area: image;    }
+.starredreview > .rating     { grid-area: rating;   font-size: 2em; padding: 20px 5px}
+.starredreview > .stars      { grid-area: stars;    }
+.starredreview {
+  flex-basis: 250px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 100px 150px;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-areas:
+    "reviewer reviewer"
+    "image rating"
+    "stars stars";
+}
+
+.textreview > .reviewer   { grid-area: reviewer; text-align: center;}
+.textreview > .reviewlogo { grid-area: image;    }
+.textreview > .rating     { grid-area: rating;   }
+.textreview {
+  flex-basis: 250px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-rows: 10% 70% 20%;
+  row-gap: 10px;
+  grid-template-areas:
+    "reviewer"
+    "image"
+    "rating";
+}
+
+.textreview {
   flex-basis: 300px;
   flex-shrink: 0;
   display: flex;
@@ -200,6 +232,27 @@ article::before, article::after {
   font-style: italic;
   font-size: 1.2em;
   margin: 2px 5px;
+}
+
+#photoscontainer {
+  display: flex;
+  overflow: auto;
+  gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
+  scrollbar-width: none;     /* hide scrollbar Firefox */
+}
+#photosarticle::before, #photosarticle::after {
+  display: none;
+}
+#photoscontainer::-webkit-scrollbar {
+  display: none; /* hide scrollbar Chrome, Safari and Opera */
+}
+
+.homepagephoto > img {
+  height: 300px;
+  border: #402a54 5px solid;
 }
 
 /* if width less than 1200, ccgrid becomes a flexbox to accomodate page wrapping */
