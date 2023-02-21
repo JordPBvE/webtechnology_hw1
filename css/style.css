@@ -127,7 +127,7 @@ article::before, article::after {
 
 .starredreview > .reviewer   { grid-area: reviewer; text-align: center;}
 .starredreview > .reviewlogo { grid-area: image;    }
-.starredreview > .rating     { grid-area: rating;   font-size: 2em; padding: 20px 5px}
+.starredreview > .rating     { grid-area: rating;   font-size: 1.5em; padding: 20px 5px}
 .starredreview > .stars      { grid-area: stars;    }
 .starredreview {
   flex-basis: 250px;
@@ -143,31 +143,32 @@ article::before, article::after {
 }
 
 .textreview > .reviewer   { grid-area: reviewer; text-align: center;}
-.textreview > .reviewlogo { grid-area: image;    }
-.textreview > .rating     { grid-area: rating;   }
+.textreview > .rating     { grid-area: rating;   text-align: center; font-size: 1.3em;}
+.textreview > .reviewlogo { grid-area: image;    padding: 0 75px;}
 .textreview {
   flex-basis: 250px;
   flex-shrink: 0;
   display: grid;
-  grid-template-rows: 10% 70% 20%;
-  row-gap: 10px;
   grid-template-areas:
     "reviewer"
     "image"
     "rating";
 }
 
-.textreview {
-  flex-basis: 300px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
+.reviewer {
+  font-size: 1.5em;
+  color: #402a54;
 }
 
 .reviewlogo {
   width: 100px; height: 100px;
   border-radius: 50%;
 }
+
+.rating {
+  color: #991932;
+}
+
 
 /* rating stars: png matte with gradient background */
 .stars {
