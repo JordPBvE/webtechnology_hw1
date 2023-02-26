@@ -1,0 +1,12 @@
+.actorphoto{
+    padding: 5px 5px;
+    width: 200;
+    height: 200px;
+}
+.actor {
+    border-style: solid;
+    border-width: 10px;
+    border-color:#bb40bb;
+    margin: 20px 0px;
+    background-color:#eb97eb;
+  }
