@@ -33,6 +33,20 @@ nav {
   border-left: solid 7px #bb40bb;
 }
 
+.boxoffice {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  border: 20px;
+  border-color: black;
+  border-style: solid;
+}
+.boxoffice tr td, thead th{
+  font-style: "Times new roman";
+  font-size: 40px;
+
+}
+
 .navbaritem {
   text-decoration: none;
   font-size: 1.5em;
