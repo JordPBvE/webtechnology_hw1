@@ -1,30 +1,109 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="description" content="A webpage for The Grand Budapest Hotel by Wes Anderson">
-    <meta name="charset"     content="utf-8">
-    <meta name="author" content="Jord van Eldik">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200;500;600&family=Zilla+Slab:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css\castcrewstyle.css">
   </head>
-
+  
   <body>
     <header>
-      <heading>The Grand Budapest Hotel</heading>
+      <heading id="pagetitle">The Grand Budapest Hotel</heading> <br/>
+      <span id="pagetitlecredits">A Wes Anderson film</span>
     </header>
 
     <nav>
-      <a href="../html/index.html">Home</a>
-      <a href="../html/index.html">Cast & Crew</a>
-      <a href="../html/index.html">Reviews</a>
+      <a class="navbaritem" id="home"      href="../html/index.html">Home</a>
+      <a class="navbaritem" id="castcrew"  href="../html/castcrew.html">Cast & Crew</a>
+      <a class="navbaritem" id="reviews"   href="../html/reviews.html">Reviews</a>
+      <a class="navbaritem" id="plot"      href="../html/plot.html">Plot</a>
+      <a class="navbaritem" id="photos"    href="../html/photos.html">Photos</a>
     </nav>
 
-    <section>
-    </section>
+    <div class="separator"><a class="separator__button" href="../html/index.html">Reviews from Google ></a></div>
 
-    <aside>
-    </aside>
+    <article id="reviewarticle">
+      <div class="reviewgrid-container">
+        <div class="starredreview" id="imdb">
+          <span class="reviewer">IMDB</span>
+          <span class="rating">8.1 / 10</span>
+          <img class="reviewlogo" src="../images/logos/imdblogo.png" alt="imdblogo">
+          <img class="stars" src="../images/otherimages/stars-matte.png" alt="review stars">
+        </div>
+        <div class="starredreview" id="rottentomatoes">
+          <span class="reviewer">Rotten Tomatoes</span>
+          <span class="rating">92%</span>
+          <img class="reviewlogo" src="../images/logos/rottentomatoeslogo.png" alt="rottentomatoeslogo">
+          <img class="stars" src="../images/otherimages/stars-matte.png" alt="review stars">
+        </div>
+        <div class="starredreview" id="metacritic">
+          <span class="reviewer">Metacritic</span>
+          <span class="rating">88%</span>
+          <img class="reviewlogo" src="../images/logos/metacriticlogo.png" alt="metacriticlogo">
+          <img class="stars" src="../images/otherimages/stars-matte.png" alt="review stars">
+        </div>
+        <div class="starredreview" id="googleaudience">
+          <span class="reviewer">Google Audience</span>
+          <span class="rating">4.7 / 5</span>
+          <img class="reviewlogo" src="../images/logos/googlelogo.png" alt="metacriticlogo">
+          <img class="stars" src="../images/otherimages/stars-matte.png" alt="review stars">
+        </div>
+      </div>
+    </article>
 
-    <footer>
-    </footer>
+    <div class="separator">Prizes won></a></div>
+
+  <article id="awardsarticle">
+    <div class="reviewgrid-container">
+      <div class="textreview" id="newyorktimes">
+        <span class="reviewer">New York Times</span>
+        <span class="rating">NYT's Choice</span>
+        <img class="reviewlogo" src="../images/logos/newyorktimeslogo.png" alt="metacriticlogo">
+     </div>
+     <div class="textreview" id="bafta">
+      <span class="reviewer">BAFTA Awards</span>
+      <span class="rating">Best Original Screenplay</span>
+      <img class="reviewlogo" src="../images/logos/baftalogo.png" alt="metacriticlogo">
+      </div>
+     <div class="textreview" id="oscars">
+      <span class="reviewer">Academy Award</span>
+      <span class="rating">Best Picture</span>
+      <img class="reviewlogo" src="../images/logos/oscarslogo.png" alt="metacriticlogo">
+     </div>
+    </div>
+  </article>
+
+  <div class="separator">General Audience></a></div>
+
+    <div class="reviewsection">
+      <div class="reviewgrid-container">
+        <div class="reviewcell">
+          <div class="reviewheader">
+            <span class="reviewtitle"><strong>Funny, sweet, inventive and wonderfully acted</strong></span>
+          </div>
+          <div class="reviewtext">
+            <p> A wonderfully funny fable of the adventures of world's greatest hotel concierge (a brilliant, inventive and hilarious performance by Ralph Fiennes)
+              and the friendship he strikes up with the hotel's new lobby boy (a strong debut by newcomer Tony Revolori).
+              The story goes in many unexpected directions, every one entertaining and eccentric, and the cast is full of first rate highly comic performances by F. Murray Abraham,
+              Adrien Brody, Willem Dafoe, Jeff Goldblum, with terrific cameos by Bill Murray, Harvey Keitel, Edward Norton, Tilda Swinton, Jason Schwartzman, Tom Wilkinson,
+              Owen Wilson, Jude Law and others I feel bad for forgetting here.
+              While not Anderson's most profound film, it may be his most joyful. I don't think I stopped smiling from first frame to last,
+              and I laughed out loud quite a few times. And yet, as in any good fable, there is some real poignancy as well.
+              A top notch marriage of a lovingly crafted art-film and a wacky human comedy, something rarely pulled off with such panache.
+              Even my friends who don't enjoy Anderson's work in general had nothing but good things to say. The sweetest treat of the movie year so far </p>
+          </div>
+          <footer> <span class="reviewauthor">by runamokprods</span>
+          <span class="reviewdate">August 15, 2014</span> 
+          </footer>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+
+
+
   </body>
 </html>
